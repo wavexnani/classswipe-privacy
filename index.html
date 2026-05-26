@@ -4,105 +4,248 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Proxi Privacy Policy</title>
-    <meta name="description" content="Official Privacy Policy for Proxi (Attendance Sorted)." />
+    <title>ClassSwipe Privacy Policy</title>
+    <meta name="description"
+        content="Privacy Policy for ClassSwipe, an attendance tracking app for college students." />
     <style>
         :root {
-            --bg: #ffffff;
-            --text: #161616;
-            --muted: #575757;
-            --divider: #e8e8e8;
+            color-scheme: light;
+            --bg: #f6f7f9;
+            --paper: #ffffff;
+            --ink: #151922;
+            --muted: #5d6675;
+            --line: #dfe4ec;
+            --accent: #0b7a4b;
+            --accent-soft: #e2f5eb;
+            --danger-soft: #fff4df;
+            --shadow: 0 18px 48px rgba(20, 29, 43, 0.08);
         }
 
         * {
             box-sizing: border-box;
         }
 
-        html,
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            background: var(--bg);
-            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(11, 122, 75, 0.12), transparent 34rem),
+                linear-gradient(180deg, #ffffff 0, var(--bg) 18rem);
+            color: var(--ink);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.65;
             -webkit-text-size-adjust: 100%;
         }
 
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
         .page {
-            width: 100%;
-            max-width: 760px;
+            width: min(100%, 920px);
             margin: 0 auto;
-            padding: 20px 16px 40px;
+            padding: 28px 16px 56px;
         }
 
-        .wordmark {
-            font-size: 1.1rem;
+        .document {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        header {
+            padding: 28px 22px 22px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #063d27;
             font-weight: 800;
-            letter-spacing: 0.02em;
-            margin: 2px 0 4px;
+            letter-spacing: 0.01em;
         }
 
-        .tagline {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.94rem;
+        .mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #121418;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+        }
+
+        .mark img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
         h1 {
-            font-size: 1.45rem;
-            line-height: 1.3;
             margin: 18px 0 8px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.08;
+            letter-spacing: 0;
+        }
+
+        .lede,
+        .meta {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .meta {
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            padding: 18px 22px;
+            background: #fbfcfd;
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 12px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #ffffff;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.94rem;
+        }
+
+        section {
+            padding: 22px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        section:last-child {
+            border-bottom: 0;
         }
 
         h2 {
-            font-size: 1.03rem;
-            line-height: 1.35;
-            margin: 0 0 8px;
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+            line-height: 1.3;
         }
 
         p,
         ul {
             margin: 0;
-            font-size: 0.98rem;
+        }
+
+        p+p,
+        ul+p,
+        p+ul {
+            margin-top: 12px;
         }
 
         ul {
-            padding-left: 18px;
+            padding-left: 20px;
         }
 
         li+li {
             margin-top: 8px;
         }
 
-        .meta {
-            margin-top: 8px;
+        .callout {
+            margin-top: 14px;
+            padding: 14px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            border: 1px solid #bfe8d3;
+        }
+
+        .warning {
+            background: var(--danger-soft);
+            border-color: #f2d9a6;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95rem;
+        }
+
+        .table th {
+            width: 32%;
+            background: #f7f9fb;
+        }
+
+        .table tr:last-child th,
+        .table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        footer {
+            padding: 18px 22px 24px;
             color: var(--muted);
             font-size: 0.92rem;
+            background: #fbfcfd;
         }
 
-        .section {
-            border-top: 1px solid var(--divider);
-            padding-top: 16px;
-            margin-top: 16px;
-        }
-
-        a {
-            color: #1f1f1f;
-            text-underline-offset: 2px;
-        }
-
-        @media (min-width: 640px) {
+        @media (max-width: 640px) {
             .page {
-                padding: 28px 24px 56px;
+                padding: 12px 10px 36px;
             }
 
-            h1 {
-                font-size: 1.65rem;
+            .document {
+                border-radius: 12px;
             }
 
-            h2 {
-                font-size: 1.08rem;
+            header,
+            section,
+            footer,
+            nav {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .table,
+            .table tbody,
+            .table tr,
+            .table th,
+            .table td {
+                display: block;
+                width: 100%;
+            }
+
+            .table th {
+                border-bottom: 0;
+                padding-bottom: 4px;
+            }
+
+            .table td {
+                padding-top: 4px;
             }
         }
     </style>
@@ -110,132 +253,235 @@
 
 <body>
     <main class="page">
-        <header>
-            <div class="wordmark">Proxi</div>
-            <p class="tagline">Attendance Sorted</p>
-            <h1>Privacy Policy</h1>
-            <p class="meta"><strong>Last Updated:</strong> March 19, 2026</p>
-        </header>
+        <article class="document">
+            <header>
+                <div class="brand" aria-label="ClassSwipe">
+                    <span class="mark" aria-hidden="true">
+                        <img src="./whiteBase.svg" alt="" />
+                    </span>
+                    <span>ClassSwipe</span>
+                </div>
+                <h1>Privacy Policy</h1>
+                <p class="lede">
+                    ClassSwipe helps college students track attendance, timetable subjects, reminders, and attendance
+                    health. This policy explains what data the app handles and how it is protected.
+                </p>
+                <p class="meta"><strong>Last updated:</strong> May 26, 2026</p>
+            </header>
 
-        <section class="section" aria-labelledby="introduction">
-            <h2 id="introduction">Introduction</h2>
-            <p>
-                Proxi is an attendance tracking app for Indian college students. We are committed to protecting your
-                privacy under the Digital Personal Data Protection Act, 2023 (DPDP Act).
-            </p>
-        </section>
+            <nav aria-label="Privacy policy sections">
+                <a href="#summary">Quick summary</a>
+                <a href="#data">Data we handle</a>
+                <a href="#permissions">Permissions</a>
+                <a href="#third-parties">Third-party services</a>
+                <a href="#rights">Your rights</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <section class="section" aria-labelledby="controller">
-            <h2 id="controller">Data Controller</h2>
-            <p>wavexnani, reachable at wavexnani@gmail.com.</p>
-        </section>
+            <section id="summary">
+                <h2>1. Quick Summary</h2>
+                <ul>
+                    <li>ClassSwipe stores your core attendance and timetable data on your device.</li>
+                    <li>Timetable image text recognition is processed on device using ML Kit. The app does not upload
+                        your timetable image for OCR.</li>
+                    <li>Analytics and crash reporting are consent-gated and are not initialized until you agree in the
+                        app.</li>
+                    <li>We do not sell your personal data.</li>
+                    <li>You can erase app data and revoke analytics consent from the app.</li>
+                </ul>
+            </section>
 
-        <section class="section" aria-labelledby="collect">
-            <h2 id="collect">What We Collect</h2>
-            <ul>
-                <li>
-                    <strong>Attendance records</strong> (subject names, present/absent counts) — stored locally on
-                    device only.
-                </li>
-                <li>
-                    <strong>Timetable data</strong> (class schedule extracted from uploaded image) — stored locally on
-                    device only.
-                </li>
-                <li>
-                    <strong>Anonymous usage analytics</strong> (screen views and feature usage via PostHog) — no
-                    personal identifiers.
-                </li>
-                <li>
-                    <strong>Device identifier</strong> (a random ID for sync conflict resolution) — not linked to
-                    identity.
-                </li>
-            </ul>
-        </section>
+            <section id="who">
+                <h2>2. Who We Are</h2>
+                <p>
+                    The data fiduciary/controller for ClassSwipe is wavexnani. For privacy questions, requests, or
+                    complaints, contact <a href="mailto:wavexnani@gmail.com">wavexnani@gmail.com</a>.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="not-collect">
-            <h2 id="not-collect">What We Do Not Collect</h2>
-            <p>
-                We do not collect your name, email address, phone number, location, or any personally identifiable
-                information.
-            </p>
-        </section>
+            <section id="data">
+                <h2>3. Data We Handle</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Attendance data</th>
+                            <td>Subject names, subject codes, present counts, absent counts, edit history, attendance
+                                health, bunk buffer, and recovery calculations.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Timetable data</th>
+                            <td>Timetable images you select, extracted subject text, timetable slots, and locally saved
+                                timetable history.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">QR transfer data</th>
+                            <td>Attendance or timetable payloads that you choose to share or import through QR features.
+                                QR sharing is user-controlled.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Device-scoped identifiers</th>
+                            <td>Random app-generated IDs stored in secure device storage. These help keep local records
+                                consistent and support sync-related logic if enabled.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Analytics events</th>
+                            <td>Consent-gated product usage events, such as onboarding completion or feature usage.
+                                These events are used to improve the app.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Crash diagnostics</th>
+                            <td>Consent-gated crash and error reports used to diagnose stability issues. Reports may
+                                include technical device, OS, app version, and error context.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="callout">
+                    <p>
+                        ClassSwipe does not require your name, phone number, email address, precise location, contacts,
+                        or payment information to track attendance.
+                    </p>
+                </div>
+            </section>
 
-        <section class="section" aria-labelledby="why">
-            <h2 id="why">Why We Collect It</h2>
-            <p>
-                We collect this data to calculate attendance percentage, bunk buffer, and recovery classes. Anonymous
-                analytics
-                help improve the app. All computation happens on-device.
-            </p>
-        </section>
+            <section id="use">
+                <h2>4. How We Use Data</h2>
+                <ul>
+                    <li>To calculate attendance percentage, safe/risk status, bunk buffer, and recovery classes.</li>
+                    <li>To save your subjects, timetable, QR imports, and attendance history on your device.</li>
+                    <li>To send optional attendance reminders and critical attendance alerts.</li>
+                    <li>To improve app quality, reliability, and feature design when you consent to telemetry.</li>
+                    <li>To prevent accidental corruption and maintain app data integrity.</li>
+                </ul>
+            </section>
 
-        <section class="section" aria-labelledby="third-party">
-            <h2 id="third-party">Third-Party Services</h2>
-            <p>
-                PostHog is used for anonymous analytics. Read PostHog Privacy Policy here:
-                <a href="https://posthog.com/privacy" target="_blank"
-                    rel="noopener noreferrer">https://posthog.com/privacy</a>.
-                We do not share your data with any other third party.
-            </p>
-        </section>
+            <section id="storage">
+                <h2>5. Storage and Retention</h2>
+                <p>
+                    Attendance, timetable, and app preference data is stored locally on your device using SQLite,
+                    SecureStore, and MMKV. Local data remains until you delete it, reset the app, clear app storage, or
+                    uninstall ClassSwipe.
+                </p>
+                <p>
+                    Analytics and crash data, when enabled by consent, may be retained by the relevant third-party
+                    provider according to that provider's retention policy.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="storage">
-            <h2 id="storage">Data Storage</h2>
-            <p>
-                All attendance and timetable data is stored locally on your device using SQLite. This data never leaves
-                your
-                device. Anonymous analytics events are sent to PostHog servers.
-            </p>
-        </section>
+            <section id="permissions">
+                <h2>6. App Permissions</h2>
+                <ul>
+                    <li><strong>Camera:</strong> used to scan QR codes and, where available, select or capture timetable
+                        images.</li>
+                    <li><strong>Photos or media:</strong> used when you choose a timetable image from your device.</li>
+                    <li><strong>Notifications:</strong> used only if you enable attendance reminders or alerts.</li>
+                </ul>
+                <p>
+                    You can manage these permissions in your device settings. Disabling a permission may limit the
+                    related feature but will not stop core attendance tracking.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="rights">
-            <h2 id="rights">Your Rights Under DPDP Act, 2023</h2>
-            <ul>
-                <li><strong>Right to access</strong> your personal data processed through the app.</li>
-                <li><strong>Right to correction</strong> of inaccurate personal data.</li>
-                <li>
-                    <strong>Right to erasure</strong> using the <strong>Erase All Data</strong> option in app Settings.
-                </li>
-                <li><strong>Right to withdraw consent</strong> at any time from app Settings.</li>
-            </ul>
-        </section>
+            <section id="consent">
+                <h2>7. Consent</h2>
+                <p>
+                    ClassSwipe uses a consent gate during onboarding. Analytics and crash diagnostics are initialized
+                    only after consent is recorded. You can revoke analytics consent in the app's Privacy & Data
+                    settings. Revoking consent stops telemetry collection and clears the consent timestamp.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="children">
-            <h2 id="children">Children's Privacy</h2>
-            <p>
-                This app is not intended for users under 18. We do not knowingly collect data from minors. Age
-                verification is
-                enforced during onboarding.
-            </p>
-        </section>
+            <section id="third-parties">
+                <h2>8. Third-Party Services</h2>
+                <p>ClassSwipe may use the following service providers:</p>
+                <ul>
+                    <li><strong>PostHog:</strong> product analytics, only after consent.</li>
+                    <li><strong>Sentry:</strong> crash and error diagnostics, only after consent and when configured.
+                    </li>
+                    <li><strong>Google ML Kit:</strong> on-device text recognition for timetable images.</li>
+                    <li><strong>Supabase:</strong> optional backend or sync-related features if enabled in the app
+                        build.</li>
+                    <li><strong>Expo services:</strong> build, notification, and app infrastructure services used by the
+                        app ecosystem.</li>
+                </ul>
+                <p>
+                    These providers process data under their own terms and privacy policies. We only use providers to
+                    operate, secure, diagnose, or improve ClassSwipe.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="changes">
-            <h2 id="changes">Changes to This Policy</h2>
-            <p>
-                We may update this policy from time to time. When we do, we will update the Last Updated date at the top
-                of
-                this page. Continued use of the app means acceptance of the updated policy.
-            </p>
-        </section>
+            <section id="sharing">
+                <h2>9. Sharing and Sale of Data</h2>
+                <p>
+                    We do not sell your personal data. We share data only with service providers needed to operate app
+                    features, comply with law, protect rights and security, or process data that you intentionally share
+                    through features such as QR transfer.
+                </p>
+            </section>
 
-        <section class="section" aria-labelledby="contact">
-            <h2 id="contact">Contact</h2>
-            <p>
-                For any privacy concerns, email wavexnani@gmail.com.
-            </p>
-        </section>
+            <section id="children">
+                <h2>10. Children's Privacy</h2>
+                <p>
+                    ClassSwipe is intended for college students aged 18 and above. The onboarding age gate does not store
+                    your date of birth. If you believe a minor has provided personal data through ClassSwipe, contact us
+                    so we can review and delete it where required.
+                </p>
+            </section>
+
+            <section id="rights">
+                <h2>11. Your Rights and Choices</h2>
+                <p>
+                    Depending on applicable law, including the Digital Personal Data Protection Act, 2023 where
+                    applicable, you may have rights to access, correct, erase, or withdraw consent for personal data.
+                </p>
+                <ul>
+                    <li>Use in-app reset controls to erase local ClassSwipe data.</li>
+                    <li>Use Privacy & Data settings to change analytics consent.</li>
+                    <li>Use device settings to manage camera, media, and notification permissions.</li>
+                    <li>Email us for privacy requests that cannot be completed in the app.</li>
+                </ul>
+            </section>
+
+            <section id="security">
+                <h2>12. Security</h2>
+                <p>
+                    ClassSwipe uses local storage, secure device storage for sensitive identifiers and consent values,
+                    encrypted MMKV where configured, and release hardening such as Android backup restrictions and code
+                    shrinking. No app or storage method can be guaranteed completely secure.
+                </p>
+            </section>
+
+            <section id="changes">
+                <h2>13. Changes to This Policy</h2>
+                <p>
+                    We may update this policy as ClassSwipe changes or as legal requirements evolve. The updated policy
+                    will be posted on this page with a new "Last updated" date.
+                </p>
+                <div class="callout warning">
+                    <p>
+                        If a change materially affects how ClassSwipe handles your data, we will take reasonable steps
+                        to notify users through the app or store listing where appropriate.
+                    </p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>14. Contact</h2>
+                <p>
+                    Privacy contact: <a href="mailto:wavexnani@gmail.com">wavexnani@gmail.com</a>
+                </p>
+                <p>
+                    App package: <code>com.wavexnani.classswipe</code>
+                </p>
+            </section>
+
+            <footer>
+                <p>
+                    This page is intended for the ClassSwipe mobile app and should be hosted at the privacy policy URL
+                    used in the app and Play Console listing.
+                </p>
+            </footer>
+        </article>
     </main>
 </body>
 
 </html>
-<!--
-HOW TO HOST THIS ON GITHUB PAGES:
-1. Go to github.com and create a new repository named exactly: proxi-privacy
-2. Make sure it is set to Public
-3. Upload this index.html file to the root of that repository
-4. Go to Settings → Pages → Source → select 'main' branch → Save
-5. Your policy will be live at: https://wavexnani.github.io/proxi-privacy
-6. This usually takes 2-5 minutes to go live after enabling Pages
-7. Once live, update PRIVACY_POLICY_URL in consent.tsx to this URL
-8. Also add this URL to your Google Play Store and Apple App Store listings
--->
