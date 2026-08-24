@@ -266,7 +266,8 @@
                     ClassSwipe helps college students track attendance, timetable subjects, reminders, and attendance
                     health. This policy explains what data the app handles and how it is protected.
                 </p>
-                <p class="meta"><strong>Last updated:</strong> May 26, 2026</p>
+                <p class="meta"><strong>Last updated:</strong> August 24, 2026</p>
+                <p class="meta">Version 1.0.0 (versionCode 4) and later.</p>
             </header>
 
             <nav aria-label="Privacy policy sections">
@@ -321,7 +322,9 @@
                         <tr>
                             <th scope="row">Device-scoped identifiers</th>
                             <td>Random app-generated IDs stored in secure device storage. These help keep local records
-                                consistent and support sync-related logic if enabled.</td>
+                                consistent and support sync-related logic if enabled. They are generated on your device,
+                                are not derived from your identity, and are only transmitted as part of consent-gated
+                                analytics or crash reports.</td>
                         </tr>
                         <tr>
                             <th scope="row">Analytics events</th>
@@ -444,9 +447,21 @@
             <section id="security">
                 <h2>12. Security</h2>
                 <p>
-                    ClassSwipe uses local storage, secure device storage for sensitive identifiers and consent values,
-                    encrypted MMKV where configured, and release hardening such as Android backup restrictions and code
-                    shrinking. No app or storage method can be guaranteed completely secure.
+                    ClassSwipe is designed to be local-first and to protect data on your device:
+                </p>
+                <ul>
+                    <li><strong>Encrypted local storage:</strong> app preferences and cached data stored with MMKV are
+                        encrypted at rest. The encryption key is generated on your device, held in secure hardware-backed
+                        storage (Android Keystore / iOS Keychain), and is never transmitted.</li>
+                    <li><strong>Secure identifiers:</strong> sensitive identifiers and consent values are stored in
+                        secure device storage.</li>
+                    <li><strong>Data integrity safeguards:</strong> attendance records use append-only audit history
+                        with atomic writes, and abuse-prevention limits protect local storage from flooding.</li>
+                    <li><strong>Release hardening:</strong> Android backup restrictions and code shrinking are enabled
+                        in production builds.</li>
+                </ul>
+                <p>
+                    No app or storage method can be guaranteed completely secure.
                 </p>
             </section>
 
